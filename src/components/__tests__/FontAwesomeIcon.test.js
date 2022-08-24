@@ -27,6 +27,13 @@ describe('using a family', () => {
       expect(vm.$el.classList.contains('fa-glasses')).toBeTruthy()
     })
 
+    it('will find a sharp solid icon using short prefix with string format', () => {
+      const vm = mountFromProps({ icon: 'fass fa-glasses' })
+
+      expect(vm.$el.tagName).toBe('svg')
+      expect(vm.$el.classList.contains('fa-glasses')).toBeTruthy()
+    })
+
     it('will find a sharp solid icon using long prefix with string format', () => {
       const vm = mountFromProps({ icon: 'fa-sharp fa-glasses' })
 
